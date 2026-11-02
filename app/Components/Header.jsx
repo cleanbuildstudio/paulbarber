@@ -43,7 +43,7 @@ export default function Header() {
         <button
           type="button"
           onClick={handleBookClick}
-          className="group relative inline-flex items-center gap-2 sm:gap-2.5 px-2.5 py-1.5 sm:px-3 sm:py-1.5 rounded-[2px] bg-[#e8e8e3] transition-all duration-300 active:scale-[0.96] cursor-pointer select-none focus:outline-none"
+          className="group relative inline-flex items-center gap-1.5 sm:gap-2.5 px-2 py-1 sm:px-3 sm:py-1.5 rounded-[2px] bg-[#e8e8e3] transition-all duration-300 active:scale-[0.96] cursor-pointer select-none focus:outline-none"
         >
           {/* Rolling Text */}
           <div className="overflow-hidden h-[12px] sm:h-[14px] md:h-[15px] flex flex-col justify-start">

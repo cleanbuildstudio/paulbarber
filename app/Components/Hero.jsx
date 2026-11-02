@@ -28,6 +28,7 @@ const BACK_PHOTOS = [
     src: "/gallery/photo1.jpg",
     alt: "Skin fade side profile",
     className: "w-[44vw] max-w-[195px] sm:w-[22vw] sm:min-w-[200px] sm:max-w-[280px] aspect-[3/4] top-[8%] sm:top-[8%]",
+    objectPosition: "object-[center_28%]",
     leftPercent: 4,
     depth: 14,
   },
@@ -36,6 +37,7 @@ const BACK_PHOTOS = [
     src: "/gallery/photo4.jpg",
     alt: "Mullet fade with beard",
     className: "w-[48vw] max-w-[210px] sm:w-[30vw] sm:min-w-[280px] sm:max-w-[460px] aspect-[4/5] sm:aspect-[16/10] top-[34%] sm:top-[6%]",
+    objectPosition: "object-[center_24%]",
     leftPercent: 44,
     depth: 10,
   },
@@ -44,6 +46,7 @@ const BACK_PHOTOS = [
     src: "/gallery/photo6.jpg",
     alt: "Client in barber chair",
     className: "w-[44vw] max-w-[195px] sm:w-[20vw] sm:min-w-[210px] sm:max-w-[290px] aspect-[4/5] top-[54%] sm:top-[50%]",
+    objectPosition: "object-[center_45%]",
     leftPercent: 84,
     depth: 16,
   },
@@ -52,6 +55,7 @@ const BACK_PHOTOS = [
     src: "/gallery/photo10.jpg",
     alt: "Master barber straight razor haircut",
     className: "w-[48vw] max-w-[210px] sm:w-[29vw] sm:min-w-[280px] sm:max-w-[440px] aspect-[4/5] sm:aspect-[16/10] top-[38%] sm:top-[5%]",
+    objectPosition: "object-[center_36%]",
     leftPercent: 124,
     depth: 12,
   },
@@ -60,6 +64,7 @@ const BACK_PHOTOS = [
     src: "/gallery/photo7.jpg",
     alt: "Sharp fade finish",
     className: "w-[44vw] max-w-[190px] sm:w-[19vw] sm:min-w-[200px] sm:max-w-[280px] aspect-[3/4] top-[10%] sm:top-[52%]",
+    objectPosition: "object-[center_25%]",
     leftPercent: 164,
     depth: 15,
   },
@@ -68,6 +73,7 @@ const BACK_PHOTOS = [
     src: "/gallery/photo12.jpg",
     alt: "Sharp geometric hairline taper",
     className: "w-[46vw] max-w-[200px] sm:w-[20vw] sm:min-w-[210px] sm:max-w-[290px] aspect-[3/4] top-[26%] sm:top-[9%]",
+    objectPosition: "object-[center_25%]",
     leftPercent: 204,
     depth: 18,
   },
@@ -79,6 +85,7 @@ const FRONT_PHOTOS = [
     src: "/gallery/photo3.jpg",
     alt: "Client in white cape by stairs",
     className: "w-[46vw] max-w-[200px] sm:w-[29vw] sm:min-w-[300px] sm:max-w-[440px] aspect-[4/5] sm:aspect-[16/10] top-[66%] sm:top-[52%]",
+    objectPosition: "object-[center_26%]",
     leftPercent: 24,
     depth: 20,
   },
@@ -87,6 +94,7 @@ const FRONT_PHOTOS = [
     src: "/gallery/photo8.jpg",
     alt: "Modern textured crop haircut",
     className: "w-[44vw] max-w-[195px] sm:w-[20vw] sm:min-w-[210px] sm:max-w-[300px] aspect-[3/4] top-[12%] sm:top-[10%]",
+    objectPosition: "object-[center_52%]",
     leftPercent: 64,
     depth: 24,
   },
@@ -94,7 +102,8 @@ const FRONT_PHOTOS = [
     id: "front-9",
     src: "/gallery/photo9.jpg",
     alt: "Barber scissor styling in cape",
-    className: "w-[46vw] max-w-[200px] sm:w-[28vw] sm:min-w-[280px] sm:max-w-[430px] aspect-[4/5] sm:aspect-[16/10] top-[24%] sm:top-[54%]",
+    className: "w-[46vw] max-w-[200px] sm:w-[28vw] sm:min-w-[280px] sm:max-w-[430px] aspect-[4/5] sm:aspect-[16/10] top-[24%] sm:top-[53%]",
+    objectPosition: "object-[center_28%]",
     leftPercent: 104,
     depth: 18,
   },
@@ -103,6 +112,7 @@ const FRONT_PHOTOS = [
     src: "/gallery/photo5.jpg",
     alt: "Studio taper fade back view",
     className: "w-[44vw] max-w-[190px] sm:w-[19vw] sm:min-w-[200px] sm:max-w-[280px] aspect-[3/4] top-[70%] sm:top-[47%]",
+    objectPosition: "object-[center_48%]",
     leftPercent: 144,
     depth: 22,
   },
@@ -111,6 +121,7 @@ const FRONT_PHOTOS = [
     src: "/gallery/photo2.jpg",
     alt: "Textured crop in white cape",
     className: "w-[46vw] max-w-[195px] sm:w-[17vw] sm:min-w-[170px] sm:max-w-[240px] aspect-[3/4] sm:aspect-[9/16] top-[50%] sm:top-[12%]",
+    objectPosition: "object-[center_46%]",
     leftPercent: 184,
     depth: 26,
   },
@@ -118,7 +129,8 @@ const FRONT_PHOTOS = [
     id: "front-11",
     src: "/gallery/photo11.jpg",
     alt: "Low skin fade crop",
-    className: "w-[44vw] max-w-[190px] sm:w-[28vw] sm:min-w-[280px] sm:max-w-[420px] aspect-[4/5] sm:aspect-[16/10] top-[68%] sm:top-[53%]",
+    className: "w-[44vw] max-w-[190px] sm:w-[28vw] sm:min-w-[280px] sm:max-w-[420px] aspect-[4/5] sm:aspect-[16/10] top-[68%] sm:top-[51%]",
+    objectPosition: "object-[center_45%]",
     leftPercent: 224,
     depth: 20,
   },
@@ -337,7 +349,7 @@ export default function Hero() {
           start: "top top",
           end: isMobile ? "+=2000" : "+=3600",
           pin: heroStageRef.current,
-          scrub: isMobile ? 0.3 : 0.8,
+          scrub: 0.1, // Low latency: Lenis handles the smooth curve, GSAP tracks instantly
           anticipatePin: 1,
           invalidateOnRefresh: true,
           onUpdate: (self) => {
@@ -797,7 +809,7 @@ export default function Hero() {
         >
           {[0, 1].map((cycle) => (
             <div key={`back-cycle-${cycle}`} className="relative w-[240vw] h-full shrink-0">
-              {BACK_PHOTOS.map((photo) => (
+              {BACK_PHOTOS.map((photo, idx) => (
                 <div
                   key={`back-${cycle}-${photo.id}`}
                   onMouseEnter={handlePhotoMouseEnter}
@@ -812,9 +824,9 @@ export default function Hero() {
                     src={photo.src}
                     alt={photo.alt}
                     fill
-                    className="object-cover object-top pointer-events-none"
+                    className={`object-cover pointer-events-none ${photo.objectPosition || "object-center"}`}
                     sizes="(max-width: 768px) 40vw, (max-width: 1280px) 30vw, 25vw"
-                    priority
+                    priority={cycle === 0 && idx < 3}
                   />
                 </div>
               ))}
@@ -868,7 +880,7 @@ export default function Hero() {
         >
           {[0, 1].map((cycle) => (
             <div key={`front-cycle-${cycle}`} className="relative w-[240vw] h-full shrink-0">
-              {FRONT_PHOTOS.map((photo) => (
+              {FRONT_PHOTOS.map((photo, idx) => (
                 <div
                   key={`front-${cycle}-${photo.id}`}
                   onMouseEnter={handlePhotoMouseEnter}
@@ -884,9 +896,9 @@ export default function Hero() {
                     src={photo.src}
                     alt={photo.alt}
                     fill
-                    className="object-cover object-top pointer-events-none"
+                    className={`object-cover pointer-events-none ${photo.objectPosition || "object-center"}`}
                     sizes="(max-width: 768px) 50vw, (max-width: 1280px) 30vw, 25vw"
-                    priority
+                    priority={cycle === 0 && idx < 3}
                   />
                 </div>
               ))}

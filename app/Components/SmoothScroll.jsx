@@ -13,15 +13,16 @@ export default function SmoothScroll({ children }) {
     // Register GSAP ScrollTrigger
     gsap.registerPlugin(ScrollTrigger);
 
-    // Initialize Lenis with refined momentum easing
+    // Initialize Lenis with snappy, low-latency momentum easing
     const lenis = new Lenis({
-      duration: 1.2,
+      duration: 0.9,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: "vertical",
       gestureOrientation: "vertical",
       smoothWheel: true,
-      wheelMultiplier: 1,
-      touchMultiplier: 1.2,
+      wheelMultiplier: 1.0,
+      syncTouch: false, // Keep 120Hz native touch gestures on mobile screens
+      touchMultiplier: 1.0,
       infinite: false,
     });
 
