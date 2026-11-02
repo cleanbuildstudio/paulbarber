@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Outfit } from "next/font/google";
 import "./globals.css";
 import WaveBackground from "./Components/WaveBackground";
+import SmoothScroll from "./Components/SmoothScroll";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,7 +41,9 @@ export default function RootLayout({
       >
         <WaveBackground look="dark" cursor={true} />
         <div style={{ position: "relative", zIndex: 10, width: "100%", maxWidth: "100%", overflowX: "clip" }}>
-          {children}
+          <SmoothScroll>
+            {children}
+          </SmoothScroll>
         </div>
       </body>
     </html>

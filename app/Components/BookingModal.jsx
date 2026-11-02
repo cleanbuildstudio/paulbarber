@@ -87,6 +87,10 @@ export default function BookingModal({ isOpen, onClose, selectedService, service
       document.body.style.paddingRight = `${scrollbarWidth}px`;
     }
 
+    if (typeof window !== "undefined" && window.__lenis) {
+      window.__lenis.stop();
+    }
+
     const handleKeyDown = (e) => {
       if (e.key === "Escape") {
         onClose();
@@ -99,6 +103,9 @@ export default function BookingModal({ isOpen, onClose, selectedService, service
       document.body.style.overflow = originalOverflow;
       document.body.style.paddingRight = originalPaddingRight;
       window.removeEventListener("keydown", handleKeyDown);
+      if (typeof window !== "undefined" && window.__lenis) {
+        window.__lenis.start();
+      }
     };
   }, [isOpen, onClose]);
 
@@ -119,6 +126,7 @@ export default function BookingModal({ isOpen, onClose, selectedService, service
   return createPortal(
     <div
       ref={overlayRef}
+      data-lenis-prevent
       onClick={handleBackdropClick}
       className="fixed inset-0 z-[100] flex items-center justify-center p-3.5 sm:p-5 md:p-6 bg-black/85 backdrop-blur-[12px] animate-booking-backdrop overflow-y-auto select-auto"
       style={{
@@ -183,7 +191,7 @@ export default function BookingModal({ isOpen, onClose, selectedService, service
           }}
         >
           {/* Cal.com Booking Widget Area - Light Monolog Theme */}
-          <div className="flex-1 w-full h-full overflow-y-auto overflow-x-hidden rounded-[6px] bg-white">
+          <div data-lenis-prevent className="flex-1 w-full h-full overflow-y-auto overflow-x-hidden rounded-[6px] bg-white">
             <Cal
               key={calLink}
               calLink={calLink}

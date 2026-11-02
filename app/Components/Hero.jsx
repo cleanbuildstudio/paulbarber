@@ -124,6 +124,17 @@ const FRONT_PHOTOS = [
   },
 ];
 
+// ==========================================
+// DRIFT SPEED CONFIGURATION:
+// Adjust how much the gallery slows down when hovering over a photo:
+//  - 1.0  = Full speed (no slowdown at all)
+//  - 0.6  = Gentle slowdown (60% speed)
+//  - 0.45 = Balanced cinematic slowdown (45% speed - recommended)
+//  - 0.2  = Heavy slowdown (20% speed)
+//  - 0.0  = Complete pause on hover
+// ==========================================
+const PHOTO_HOVER_DRIFT_SPEED = 0.47;
+
 export default function Hero() {
   const pinWrapperRef = useRef(null);
   const heroStageRef = useRef(null);
@@ -567,8 +578,12 @@ export default function Hero() {
     activeCardRef.current = card;
 
     if (driftTweenRef.current) {
-// Change 0.18 to 0.6 for a gentle, subtle slowdown
-gsap.to(driftTweenRef.current, { timeScale: 0.1, duration: 0.9, overwrite: "auto" });
+      gsap.to(driftTweenRef.current, {
+        timeScale: PHOTO_HOVER_DRIFT_SPEED,
+        duration: 0.6,
+        ease: "power2.out",
+        overwrite: "auto",
+      });
     }
 
     // Attach hardware-accelerated liquid warp filter
@@ -709,10 +724,14 @@ gsap.to(driftTweenRef.current, { timeScale: 0.1, duration: 0.9, overwrite: "auto
       if (!st.end || st.end <= st.start) return false;
 
       const targetScroll = st.start + (st.end - st.start) * 0.68;
-      window.scrollTo({
-        top: targetScroll,
-        behavior: instant ? "auto" : "smooth",
-      });
+      if (typeof window !== "undefined" && window.__lenis) {
+        window.__lenis.scrollTo(targetScroll, { immediate: instant });
+      } else {
+        window.scrollTo({
+          top: targetScroll,
+          behavior: instant ? "auto" : "smooth",
+        });
+      }
       return true;
     };
 
