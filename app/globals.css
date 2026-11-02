@@ -85,3 +85,9 @@ body {
 [data-wave-rows]:hover [data-wave-row]:not(:hover) {
   opacity: .38;
 }
+
+/* Ensure Next.js development badge does not obstruct mobile UI */
+nextjs-portal {
+  pointer-events: none !important;
+}
+

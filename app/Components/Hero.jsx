@@ -27,7 +27,7 @@ const BACK_PHOTOS = [
     id: "back-1",
     src: "/gallery/photo1.jpg",
     alt: "Skin fade side profile",
-    className: "w-[46vw] max-w-[210px] sm:w-[22vw] sm:min-w-[200px] sm:max-w-[280px] aspect-[3/4] top-[7%] sm:top-[8%]",
+    className: "w-[44vw] max-w-[195px] sm:w-[22vw] sm:min-w-[200px] sm:max-w-[280px] aspect-[3/4] top-[8%] sm:top-[8%]",
     leftPercent: 4,
     depth: 14,
   },
@@ -35,7 +35,7 @@ const BACK_PHOTOS = [
     id: "back-4",
     src: "/gallery/photo4.jpg",
     alt: "Mullet fade with beard",
-    className: "w-[54vw] max-w-[240px] sm:w-[30vw] sm:min-w-[280px] sm:max-w-[460px] aspect-[4/5] sm:aspect-[16/10] top-[64%] sm:top-[6%]",
+    className: "w-[48vw] max-w-[210px] sm:w-[30vw] sm:min-w-[280px] sm:max-w-[460px] aspect-[4/5] sm:aspect-[16/10] top-[34%] sm:top-[6%]",
     leftPercent: 44,
     depth: 10,
   },
@@ -43,15 +43,15 @@ const BACK_PHOTOS = [
     id: "back-6",
     src: "/gallery/photo6.jpg",
     alt: "Client in barber chair",
-    className: "w-[45vw] max-w-[200px] sm:w-[20vw] sm:min-w-[210px] sm:max-w-[290px] aspect-[4/5] top-[10%] sm:top-[50%]",
-    leftPercent: 78,
+    className: "w-[44vw] max-w-[195px] sm:w-[20vw] sm:min-w-[210px] sm:max-w-[290px] aspect-[4/5] top-[54%] sm:top-[50%]",
+    leftPercent: 84,
     depth: 16,
   },
   {
     id: "back-10",
     src: "/gallery/photo10.jpg",
     alt: "Master barber straight razor haircut",
-    className: "w-[55vw] max-w-[240px] sm:w-[29vw] sm:min-w-[280px] sm:max-w-[440px] aspect-[4/5] sm:aspect-[16/10] top-[62%] sm:top-[5%]",
+    className: "w-[48vw] max-w-[210px] sm:w-[29vw] sm:min-w-[280px] sm:max-w-[440px] aspect-[4/5] sm:aspect-[16/10] top-[38%] sm:top-[5%]",
     leftPercent: 124,
     depth: 12,
   },
@@ -59,15 +59,15 @@ const BACK_PHOTOS = [
     id: "back-7",
     src: "/gallery/photo7.jpg",
     alt: "Sharp fade finish",
-    className: "w-[44vw] max-w-[195px] sm:w-[19vw] sm:min-w-[200px] sm:max-w-[280px] aspect-[3/4] top-[8%] sm:top-[52%]",
-    leftPercent: 168,
+    className: "w-[44vw] max-w-[190px] sm:w-[19vw] sm:min-w-[200px] sm:max-w-[280px] aspect-[3/4] top-[10%] sm:top-[52%]",
+    leftPercent: 164,
     depth: 15,
   },
   {
     id: "back-12",
     src: "/gallery/photo12.jpg",
     alt: "Sharp geometric hairline taper",
-    className: "w-[50vw] max-w-[220px] sm:w-[20vw] sm:min-w-[210px] sm:max-w-[290px] aspect-[3/4] top-[66%] sm:top-[9%]",
+    className: "w-[46vw] max-w-[200px] sm:w-[20vw] sm:min-w-[210px] sm:max-w-[290px] aspect-[3/4] top-[26%] sm:top-[9%]",
     leftPercent: 204,
     depth: 18,
   },
@@ -78,23 +78,23 @@ const FRONT_PHOTOS = [
     id: "front-3",
     src: "/gallery/photo3.jpg",
     alt: "Client in white cape by stairs",
-    className: "w-[54vw] max-w-[240px] sm:w-[29vw] sm:min-w-[300px] sm:max-w-[440px] aspect-[4/5] sm:aspect-[16/10] top-[60%] sm:top-[52%]",
-    leftPercent: 22,
+    className: "w-[46vw] max-w-[200px] sm:w-[29vw] sm:min-w-[300px] sm:max-w-[440px] aspect-[4/5] sm:aspect-[16/10] top-[66%] sm:top-[52%]",
+    leftPercent: 24,
     depth: 20,
   },
   {
     id: "front-8",
     src: "/gallery/photo8.jpg",
     alt: "Modern textured crop haircut",
-    className: "w-[46vw] max-w-[205px] sm:w-[20vw] sm:min-w-[210px] sm:max-w-[300px] aspect-[3/4] top-[12%] sm:top-[10%]",
-    leftPercent: 62,
+    className: "w-[44vw] max-w-[195px] sm:w-[20vw] sm:min-w-[210px] sm:max-w-[300px] aspect-[3/4] top-[12%] sm:top-[10%]",
+    leftPercent: 64,
     depth: 24,
   },
   {
     id: "front-9",
     src: "/gallery/photo9.jpg",
     alt: "Barber scissor styling in cape",
-    className: "w-[52vw] max-w-[230px] sm:w-[28vw] sm:min-w-[280px] sm:max-w-[430px] aspect-[4/5] sm:aspect-[16/10] top-[64%] sm:top-[54%]",
+    className: "w-[46vw] max-w-[200px] sm:w-[28vw] sm:min-w-[280px] sm:max-w-[430px] aspect-[4/5] sm:aspect-[16/10] top-[24%] sm:top-[54%]",
     leftPercent: 104,
     depth: 18,
   },
@@ -102,7 +102,7 @@ const FRONT_PHOTOS = [
     id: "front-5",
     src: "/gallery/photo5.jpg",
     alt: "Studio taper fade back view",
-    className: "w-[44vw] max-w-[190px] sm:w-[19vw] sm:min-w-[200px] sm:max-w-[280px] aspect-[3/4] top-[9%] sm:top-[47%]",
+    className: "w-[44vw] max-w-[190px] sm:w-[19vw] sm:min-w-[200px] sm:max-w-[280px] aspect-[3/4] top-[70%] sm:top-[47%]",
     leftPercent: 144,
     depth: 22,
   },
@@ -110,7 +110,7 @@ const FRONT_PHOTOS = [
     id: "front-2",
     src: "/gallery/photo2.jpg",
     alt: "Textured crop in white cape",
-    className: "w-[48vw] max-w-[210px] sm:w-[17vw] sm:min-w-[170px] sm:max-w-[240px] aspect-[3/4] sm:aspect-[9/16] top-[62%] sm:top-[12%]",
+    className: "w-[46vw] max-w-[195px] sm:w-[17vw] sm:min-w-[170px] sm:max-w-[240px] aspect-[3/4] sm:aspect-[9/16] top-[50%] sm:top-[12%]",
     leftPercent: 184,
     depth: 26,
   },
@@ -118,8 +118,8 @@ const FRONT_PHOTOS = [
     id: "front-11",
     src: "/gallery/photo11.jpg",
     alt: "Low skin fade crop",
-    className: "w-[45vw] max-w-[200px] sm:w-[28vw] sm:min-w-[280px] sm:max-w-[420px] aspect-[4/5] sm:aspect-[16/10] top-[11%] sm:top-[53%]",
-    leftPercent: 220,
+    className: "w-[44vw] max-w-[190px] sm:w-[28vw] sm:min-w-[280px] sm:max-w-[420px] aspect-[4/5] sm:aspect-[16/10] top-[68%] sm:top-[53%]",
+    leftPercent: 224,
     depth: 20,
   },
 ];
@@ -748,7 +748,7 @@ gsap.to(driftTweenRef.current, { timeScale: 0.1, duration: 0.9, overwrite: "auto
         {/* Bottom Section - Bio & Baseline Info */}
           <header
             ref={bioRef}
-            className="absolute bottom-0 inset-x-0 w-full flex justify-between items-end gap-3 sm:gap-6 z-40 pointer-events-none transition-opacity px-4 pb-3.5 sm:px-8 sm:pb-6 md:px-12 md:pb-8"
+            className="absolute bottom-0 inset-x-0 w-full flex justify-between items-end gap-3 sm:gap-6 z-40 pointer-events-none transition-opacity px-4 pb-[max(0.875rem,env(safe-area-inset-bottom))] sm:px-8 sm:pb-6 md:px-12 md:pb-8"
           >
             <div className="pointer-events-auto shrink-0">
               <p className="text-[8.5px] xs:text-[9.5px] sm:text-[11px] md:text-[13px] tracking-wider uppercase font-medium text-white/80 leading-tight whitespace-nowrap">
@@ -793,7 +793,7 @@ gsap.to(driftTweenRef.current, { timeScale: 0.1, duration: 0.9, overwrite: "auto
                     src={photo.src}
                     alt={photo.alt}
                     fill
-                    className="object-cover pointer-events-none"
+                    className="object-cover object-top pointer-events-none"
                     sizes="(max-width: 768px) 40vw, (max-width: 1280px) 30vw, 25vw"
                     priority
                   />
@@ -865,7 +865,7 @@ gsap.to(driftTweenRef.current, { timeScale: 0.1, duration: 0.9, overwrite: "auto
                     src={photo.src}
                     alt={photo.alt}
                     fill
-                    className="object-cover pointer-events-none"
+                    className="object-cover object-top pointer-events-none"
                     sizes="(max-width: 768px) 50vw, (max-width: 1280px) 30vw, 25vw"
                     priority
                   />

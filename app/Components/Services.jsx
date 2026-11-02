@@ -4,7 +4,7 @@ import { forwardRef, useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import BookingModal from "./BookingModal";
-import BookingSlider from "./BookingSlider";
+import BookLink from "./BookLink";
 
 const SERVICES = [
   {
@@ -195,13 +195,9 @@ const Services = forwardRef(function Services({ className = "", onOpenBooking },
       {/* Bottom spacer to preserve exact vertical balance */}
       <div className="w-full h-4" />
 
-      {/* Main booking action: Interactive Slider Pill matching reference image */}
-      <div className="text-center text-[#111111] pointer-events-auto flex justify-center items-center py-6 sm:py-8 relative">
-        <BookingSlider
-          onBook={() => handleOpenBooking("haircut")}
-          label="Slide to book"
-          labelClassName="text-[#F2F0EB]/90" 
-        />
+      {/* Main booking action: BookLink */}
+      <div className="pointer-events-auto flex justify-center items-center py-6 sm:py-8 relative">
+        <BookLink onClick={() => handleOpenBooking("haircut")} />
       </div>
 
       {/* Booking Modal */}
