@@ -35,11 +35,11 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${outfit.variable} h-full antialiased`}
     >
       <body
-        className="min-h-full text-white flex flex-col font-sans overflow-x-hidden max-w-full"
+        className="min-h-full text-white flex flex-col font-sans overflow-x-clip max-w-full"
         style={{ backgroundColor: "#111111" }}
       >
         <WaveBackground look="dark" cursor={true} />
-        <div style={{ position: "relative", zIndex: 10, width: "100%", maxWidth: "100%", overflowX: "hidden" }}>
+        <div style={{ position: "relative", zIndex: 10, width: "100%", maxWidth: "100%", overflowX: "clip" }}>
           {children}
         </div>
       </body>

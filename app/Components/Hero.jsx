@@ -341,15 +341,19 @@ export default function Hero() {
       //  - 2.10 to 2.85: Transition to Section 3 (Services)
       //  - 2.85 to 4.0: Section 3 Hold (Left-aligned typography & interactive services list)
       //  - > 4.0: Pin releases naturally -> smooth flow into Section 4 (Footer)!
+      const isMobile = window.innerWidth < 768;
+
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: pinWrapperRef.current,
           start: "top top",
-          end: "+=3600",
+          end: isMobile ? "+=1900" : "+=3600",
           pin: heroStageRef.current,
-          scrub: 0.8,
-          anticipatePin: 1,
+          pinType: isMobile ? "transform" : "fixed",
+          scrub: isMobile ? 0.2 : 0.8,
+          anticipatePin: isMobile ? 0 : 1,
           invalidateOnRefresh: true,
+          fastScrollEnd: isMobile,
           onUpdate: (self) => {
             const p = self.progress;
 
@@ -601,11 +605,22 @@ export default function Hero() {
 
       scrollEl.addEventListener("scroll", handleInfiniteScroll, { passive: true });
 
+      let isWindowScrolling = false;
+      let windowScrollTimer = null;
+      const onWindowScroll = () => {
+        isWindowScrolling = true;
+        clearTimeout(windowScrollTimer);
+        windowScrollTimer = setTimeout(() => {
+          isWindowScrolling = false;
+        }, 180);
+      };
+      window.addEventListener("scroll", onWindowScroll, { passive: true });
+
       let lastTime = performance.now();
       const autoDrift = (now) => {
         const dt = now - lastTime;
         lastTime = now;
-        if (!isMobileUserInteractingRef.current && scrollTriggerRef.current) {
+        if (!isMobileUserInteractingRef.current && !isWindowScrolling && scrollTriggerRef.current) {
           const p = scrollTriggerRef.current.progress;
           if (p >= 0.15 && p <= 0.65) {
             scrollEl.scrollLeft += 0.45 * (dt / 16.67);
@@ -617,6 +632,8 @@ export default function Hero() {
 
       cleanupMobileScroll = () => {
         clearTimeout(tId);
+        clearTimeout(windowScrollTimer);
+        window.removeEventListener("scroll", onWindowScroll);
         scrollEl.removeEventListener("scroll", handleInfiniteScroll);
         if (mobileDriftRafRef.current) {
           cancelAnimationFrame(mobileDriftRafRef.current);
@@ -984,7 +1001,7 @@ gsap.to(driftTweenRef.current, { timeScale: 0.1, duration: 0.9, overwrite: "auto
                 isMobileUserInteractingRef.current = false;
               }, 1200);
             }}
-            className="w-full overflow-x-auto scrollbar-none pointer-events-auto flex gap-3 px-4 py-1 touch-pan-x"
+            className="w-full overflow-x-auto scrollbar-none pointer-events-auto flex gap-3 px-4 py-1 touch-auto"
             style={{
               WebkitOverflowScrolling: "touch",
               scrollbarWidth: "none",
