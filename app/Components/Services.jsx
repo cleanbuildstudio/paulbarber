@@ -200,7 +200,7 @@ const Services = forwardRef(function Services({ className = "", onOpenBooking },
         <BookingSlider
           onBook={() => handleOpenBooking("haircut")}
           label="Slide to book"
-          labelClassName="text-[#111111]" 
+          labelClassName="text-[#F2F0EB]/90" 
         />
       </div>
 

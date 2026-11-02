@@ -206,9 +206,9 @@ export default function Hero() {
     // On mobile (<768px), lift PaUL BARber into the upper space so the Brandon Yasin carousel has the entire bottom half!
     const cy =
       window.innerWidth < 768
-        ? Math.max(window.innerHeight * 0.22, 120)
+        ? Math.max(window.innerHeight * 0.21, 115)
         : window.innerHeight / 2;
-    const scale = window.innerWidth < 480 ? 1.15 : window.innerWidth < 768 ? 1.35 : 1.7;
+    const scale = window.innerWidth < 480 ? 1.25 : window.innerWidth < 768 ? 1.42 : 1.7;
 
     const wP = pRect.width * scale;
     const hP = pRect.height * scale;
@@ -347,13 +347,11 @@ export default function Hero() {
         scrollTrigger: {
           trigger: pinWrapperRef.current,
           start: "top top",
-          end: isMobile ? "+=1900" : "+=3600",
+          end: isMobile ? "+=2200" : "+=3600",
           pin: heroStageRef.current,
-          pinType: isMobile ? "transform" : "fixed",
-          scrub: isMobile ? 0.2 : 0.8,
-          anticipatePin: isMobile ? 0 : 1,
+          scrub: isMobile ? 0.4 : 0.8,
+          anticipatePin: 1,
           invalidateOnRefresh: true,
-          fastScrollEnd: isMobile,
           onUpdate: (self) => {
             const p = self.progress;
 
@@ -858,23 +856,23 @@ gsap.to(driftTweenRef.current, { timeScale: 0.1, duration: 0.9, overwrite: "auto
         {/* Bottom Section - Bio & Baseline Info */}
           <header
             ref={bioRef}
-            className="absolute bottom-0 inset-x-0 w-full flex justify-between items-end z-40 pointer-events-none transition-opacity px-4 pb-4 sm:px-8 sm:pb-6 md:px-12 md:pb-8"
+            className="absolute bottom-0 inset-x-0 w-full flex justify-between items-end gap-3 sm:gap-6 z-40 pointer-events-none transition-opacity px-4 pb-3.5 sm:px-8 sm:pb-6 md:px-12 md:pb-8"
           >
             <div className="pointer-events-auto shrink-0">
-              <p className="text-[9px] sm:text-[11px] md:text-[13px] tracking-wider uppercase font-medium text-white/90 leading-tight whitespace-nowrap">
-                Hair AND BEAUTY
+              <p className="text-[8.5px] xs:text-[9.5px] sm:text-[11px] md:text-[13px] tracking-wider uppercase font-medium text-white/80 leading-tight whitespace-nowrap">
+                HAIR AND BEAUTY
               </p>
             </div>
 
-            <div className="pointer-events-auto max-w-[190px] xs:max-w-[240px] sm:max-w-[340px] md:max-w-[420px] ">
-              <p className="text-[9px] xs:text-[10px] sm:text-[12px] md:text-[13px] lg:text-[14px] font-medium text-white/95 leading-tight sm:leading-snug">
+            <div className="pointer-events-auto max-w-[145px] xs:max-w-[175px] sm:max-w-[320px] md:max-w-[420px]">
+              <p className="text-[8px] xs:text-[9px] sm:text-[11px] md:text-[13px] lg:text-[14px] font-normal text-white/80 leading-[1.25] text-right sm:text-left">
                 Clean cuts, honest conversation, zero judgement. Sharp taper or wild curls, I&apos;ll make it yours. Come as you are.
               </p>
             </div>
 
             <div className="pointer-events-auto hidden sm:block shrink-0">
-              <p className="text-[11px] sm:text-[12px] md:text-[13px] tracking-wider uppercase font-medium text-white/90 leading-tight">
-                BarBaresh
+              <p className="text-[11px] sm:text-[12px] md:text-[13px] tracking-wider uppercase font-medium text-white/80 leading-tight">
+                BARBARESH
               </p>
             </div>
           </header>
@@ -988,7 +986,7 @@ gsap.to(driftTweenRef.current, { timeScale: 0.1, duration: 0.9, overwrite: "auto
         {/* LAYER 3-B: MOBILE BRANDON YASIN INFINITE GALLERY (z-30, Mobile only < md) */}
         <div
           ref={mobileGalleryRef}
-          className="md:hidden absolute bottom-5 inset-x-0 z-30 pointer-events-none opacity-0 flex flex-col gap-2"
+          className="md:hidden absolute bottom-6 sm:bottom-8 inset-x-0 z-30 pointer-events-none opacity-0 flex flex-col gap-2.5"
         >
           {/* Swipeable Carousel Track with infinite momentum touch */}
           <div
@@ -1001,7 +999,7 @@ gsap.to(driftTweenRef.current, { timeScale: 0.1, duration: 0.9, overwrite: "auto
                 isMobileUserInteractingRef.current = false;
               }, 1200);
             }}
-            className="w-full overflow-x-auto scrollbar-none pointer-events-auto flex gap-3 px-4 py-1 touch-auto"
+            className="w-full overflow-x-auto scrollbar-none pointer-events-auto flex gap-3.5 px-4 py-1 touch-auto"
             style={{
               WebkitOverflowScrolling: "touch",
               scrollbarWidth: "none",
@@ -1011,21 +1009,22 @@ gsap.to(driftTweenRef.current, { timeScale: 0.1, duration: 0.9, overwrite: "auto
             {TRIPLE_MOBILE_GALLERY.map((item, idx) => (
               <div
                 key={`mob-card-${item.id}-${idx}`}
-                className="shrink-0 w-[55vw] max-w-[230px] flex flex-col gap-1.5 select-none active:scale-[0.98] transition-transform"
+                className="shrink-0 w-[74vw] xs:w-[70vw] sm:w-[60vw] max-w-[320px] flex flex-col gap-2 select-none active:scale-[0.98] transition-transform"
               >
                 {/* Minimal Editorial Title above Image (Brandon Yasin style) */}
-                <div className="flex items-center justify-between text-[10px]  text-[#F2F0EB]/80 uppercase px-0.5">
-                  <span className="truncate tracking-widest">{item.title}</span>
+                <div className="flex items-center justify-between text-[11px] sm:text-[12px] font-semibold text-[#F2F0EB]/90 uppercase px-0.5 tracking-wider">
+                  <span className="truncate">{item.title}</span>
+                  <span className="text-[#F2F0EB]/40 font-mono text-[10px] tracking-normal">{item.number}</span>
                 </div>
 
                 {/* Tall Portrait Card */}
-                <div className="relative aspect-[3/4] w-full rounded-[2px] overflow-hidden bg-neutral-900 border border-white/10 shadow-2xl">
+                <div className="relative aspect-[3/4] w-full rounded-[3px] overflow-hidden bg-neutral-900 border border-white/15 shadow-2xl">
                   <Image
                     src={item.src}
                     alt={item.alt}
                     fill
                     className="object-cover pointer-events-none"
-                    sizes="60vw"
+                    sizes="(max-width: 640px) 75vw, 320px"
                     priority={idx < 4}
                   />
                   {/* Subtle editorial gradient overlay */}

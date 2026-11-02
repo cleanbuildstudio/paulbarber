@@ -2,7 +2,11 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 
-export default function BookingSlider({ onBook, label = "Slide to book" }) {
+export default function BookingSlider({
+  onBook,
+  label = "Slide to book",
+  labelClassName = "text-[#F2F0EB]",
+}) {
   const trackRef = useRef(null);
   const [isDragging, setIsDragging] = useState(false);
   const [dragX, setDragX] = useState(0);
@@ -34,13 +38,6 @@ export default function BookingSlider({ onBook, label = "Slide to book" }) {
     setIsSuccess(true);
     setDragX(maxDrag);
     dragXRef.current = maxDrag;
-
-    // Haptic pulse on mobile devices if supported
-    if (typeof window !== "undefined" && "vibrate" in navigator) {
-      try {
-        navigator.vibrate(40);
-      } catch {}
-    }
 
     // Call booking callback
     onBook?.();
@@ -124,9 +121,11 @@ export default function BookingSlider({ onBook, label = "Slide to book" }) {
     window.addEventListener("mouseup", handleMouseUp);
   };
 
-  // Click on track: smoothly slide across to complete and book
+  // Click on track: on desktop smoothly slides across; on mobile touch, require dragging the knob
   const handleTrackClick = (e) => {
-    // If the user already dragged, don't double trigger
+    if (typeof window !== "undefined" && window.matchMedia("(pointer: coarse)").matches) {
+      return;
+    }
     if (dragX > 15) return;
     triggerSuccess();
   };
@@ -152,9 +151,9 @@ export default function BookingSlider({ onBook, label = "Slide to book" }) {
     <div
       ref={trackRef}
       onClick={handleTrackClick}
-      className="relative inline-flex items-center justify-between select-none cursor-pointer rounded-full bg-[#F2F0EB] p-1 w-[205px] xs:w-[215px] sm:w-[230px] h-[44px] sm:h-[48px] overflow-hidden shadow-2xl transition-shadow hover:border-[#]/35 active:scale-[0.99]"
+      className="relative inline-flex items-center justify-between select-none cursor-pointer rounded-full bg-[#0a0a0a] border border-white/20 p-1 w-[205px] xs:w-[215px] sm:w-[230px] h-[44px] sm:h-[48px] overflow-hidden shadow-2xl transition-shadow hover:border-white/35 active:scale-[0.99]"
       style={{
-        touchAction: "none",
+        touchAction: "pan-y",
       }}
       role="button"
       tabIndex={0}
@@ -168,9 +167,9 @@ export default function BookingSlider({ onBook, label = "Slide to book" }) {
     >
       {/* Dynamic Slide Trail Fill */}
       <div
-        className="absolute left-0 inset-y-0 bg-[#111111]/10 rounded-full pointer-events-none transition-all"
+        className="absolute left-0 inset-y-0 bg-white/10 rounded-full pointer-events-none transition-all"
         style={{
-          width: `${dragX + (typeof window !== "undefined" && window.innerWidth < 640 ? 40 : 44)}px`,
+          width: dragX > 0 ? `${dragX + 42}px` : "0px",
         }}
       />
 
@@ -181,18 +180,20 @@ export default function BookingSlider({ onBook, label = "Slide to book" }) {
           opacity: isSuccess ? 0 : Math.max(0, 1 - progress * 1.6),
         }}
       >
-        <span className="text-[13px] sm:text-[14px] font-medium text-[#]/95 tracking-normal [#]space-nowrap">
+        <span
+          className={`text-[13px] sm:text-[14px] font-medium tracking-normal whitespace-nowrap ${labelClassName}`}
+        >
           {label}
         </span>
       </div>
 
-      {/* The Draggable Knob (Exact Monolog / Modern Slider Pill Circle) */}
+      {/* The Draggable Knob */}
       <div
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
         onMouseDown={handleMouseDown}
-        className="relative z-10 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#111111] text-[#F2F0EB] flex items-center justify-center shadow-lg cursor-grab active:cursor-grabbing shrink-0"
+        className="relative z-10 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white text-black flex items-center justify-center shadow-lg cursor-grab active:cursor-grabbing shrink-0"
         style={{
           transform: `translateX(${dragX}px)`,
           transition: isDragging ? "none" : "transform 0.32s cubic-bezier(0.16, 1, 0.3, 1)",
@@ -200,7 +201,7 @@ export default function BookingSlider({ onBook, label = "Slide to book" }) {
       >
         {isSuccess ? (
           <svg
-            className="w-4 h-4 text-[#F2F0EB] animate-scale-up"
+            className="w-4 h-4 text-black animate-scale-up"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -210,7 +211,7 @@ export default function BookingSlider({ onBook, label = "Slide to book" }) {
           </svg>
         ) : (
           <svg
-            className="w-4 h-4 text-[#F2F0EB] transition-transform duration-200"
+            className="w-4 h-4 text-black transition-transform duration-200"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -225,7 +226,15 @@ export default function BookingSlider({ onBook, label = "Slide to book" }) {
         )}
       </div>
 
-     
+      {/* Subtle chevron prompt on right edge at rest */}
+      <div
+        className="mr-2 text-white/30 text-xs pointer-events-none transition-opacity"
+        style={{ opacity: Math.max(0, 0.4 - progress) }}
+      >
+        <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        </svg>
+      </div>
     </div>
   );
 }
