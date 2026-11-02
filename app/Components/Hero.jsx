@@ -27,7 +27,7 @@ const BACK_PHOTOS = [
     id: "back-1",
     src: "/gallery/photo1.jpg",
     alt: "Skin fade side profile",
-    className: "w-[44vw] max-w-[200px] sm:w-[22vw] sm:min-w-[200px] sm:max-w-[280px] aspect-[3/4] top-[8%]",
+    className: "w-[46vw] max-w-[210px] sm:w-[22vw] sm:min-w-[200px] sm:max-w-[280px] aspect-[3/4] top-[7%] sm:top-[8%]",
     leftPercent: 4,
     depth: 14,
   },
@@ -35,7 +35,7 @@ const BACK_PHOTOS = [
     id: "back-4",
     src: "/gallery/photo4.jpg",
     alt: "Mullet fade with beard",
-    className: "hidden sm:block w-[30vw] min-w-[280px] max-w-[460px] aspect-[16/10] top-[6%]",
+    className: "w-[54vw] max-w-[240px] sm:w-[30vw] sm:min-w-[280px] sm:max-w-[460px] aspect-[4/5] sm:aspect-[16/10] top-[64%] sm:top-[6%]",
     leftPercent: 44,
     depth: 10,
   },
@@ -43,15 +43,15 @@ const BACK_PHOTOS = [
     id: "back-6",
     src: "/gallery/photo6.jpg",
     alt: "Client in barber chair",
-    className: "w-[42vw] max-w-[190px] sm:w-[20vw] sm:min-w-[210px] sm:max-w-[290px] aspect-[4/5] top-[50%]",
-    leftPercent: 70,
+    className: "w-[45vw] max-w-[200px] sm:w-[20vw] sm:min-w-[210px] sm:max-w-[290px] aspect-[4/5] top-[10%] sm:top-[50%]",
+    leftPercent: 78,
     depth: 16,
   },
   {
     id: "back-10",
     src: "/gallery/photo10.jpg",
     alt: "Master barber straight razor haircut",
-    className: "hidden sm:block w-[29vw] min-w-[280px] max-w-[440px] aspect-[16/10] top-[5%]",
+    className: "w-[55vw] max-w-[240px] sm:w-[29vw] sm:min-w-[280px] sm:max-w-[440px] aspect-[4/5] sm:aspect-[16/10] top-[62%] sm:top-[5%]",
     leftPercent: 124,
     depth: 12,
   },
@@ -59,16 +59,16 @@ const BACK_PHOTOS = [
     id: "back-7",
     src: "/gallery/photo7.jpg",
     alt: "Sharp fade finish",
-    className: "w-[40vw] max-w-[180px] sm:w-[19vw] sm:min-w-[200px] sm:max-w-[280px] aspect-[3/4] top-[52%]",
-    leftPercent: 182,
+    className: "w-[44vw] max-w-[195px] sm:w-[19vw] sm:min-w-[200px] sm:max-w-[280px] aspect-[3/4] top-[8%] sm:top-[52%]",
+    leftPercent: 168,
     depth: 15,
   },
   {
     id: "back-12",
     src: "/gallery/photo12.jpg",
     alt: "Sharp geometric hairline taper",
-    className: "hidden md:block w-[20vw] min-w-[210px] max-w-[290px] aspect-[3/4] top-[9%]",
-    leftPercent: 200,
+    className: "w-[50vw] max-w-[220px] sm:w-[20vw] sm:min-w-[210px] sm:max-w-[290px] aspect-[3/4] top-[66%] sm:top-[9%]",
+    leftPercent: 204,
     depth: 18,
   },
 ];
@@ -78,7 +78,7 @@ const FRONT_PHOTOS = [
     id: "front-3",
     src: "/gallery/photo3.jpg",
     alt: "Client in white cape by stairs",
-    className: "w-[50vw] max-w-[230px] sm:w-[29vw] sm:min-w-[300px] sm:max-w-[440px] aspect-[16/10] top-[52%]",
+    className: "w-[54vw] max-w-[240px] sm:w-[29vw] sm:min-w-[300px] sm:max-w-[440px] aspect-[4/5] sm:aspect-[16/10] top-[60%] sm:top-[52%]",
     leftPercent: 22,
     depth: 20,
   },
@@ -86,15 +86,15 @@ const FRONT_PHOTOS = [
     id: "front-8",
     src: "/gallery/photo8.jpg",
     alt: "Modern textured crop haircut",
-    className: "w-[42vw] max-w-[190px] sm:w-[20vw] sm:min-w-[210px] sm:max-w-[300px] aspect-[3/4] top-[10%]",
-    leftPercent: 88,
+    className: "w-[46vw] max-w-[205px] sm:w-[20vw] sm:min-w-[210px] sm:max-w-[300px] aspect-[3/4] top-[12%] sm:top-[10%]",
+    leftPercent: 62,
     depth: 24,
   },
   {
     id: "front-9",
     src: "/gallery/photo9.jpg",
     alt: "Barber scissor styling in cape",
-    className: "hidden sm:block w-[28vw] min-w-[280px] max-w-[430px] aspect-[16/10] top-[54%]",
+    className: "w-[52vw] max-w-[230px] sm:w-[28vw] sm:min-w-[280px] sm:max-w-[430px] aspect-[4/5] sm:aspect-[16/10] top-[64%] sm:top-[54%]",
     leftPercent: 104,
     depth: 18,
   },
@@ -102,7 +102,7 @@ const FRONT_PHOTOS = [
     id: "front-5",
     src: "/gallery/photo5.jpg",
     alt: "Studio taper fade back view",
-    className: "hidden sm:block w-[19vw] min-w-[200px] max-w-[280px] aspect-[3/4] top-[47%]",
+    className: "w-[44vw] max-w-[190px] sm:w-[19vw] sm:min-w-[200px] sm:max-w-[280px] aspect-[3/4] top-[9%] sm:top-[47%]",
     leftPercent: 144,
     depth: 22,
   },
@@ -110,33 +110,19 @@ const FRONT_PHOTOS = [
     id: "front-2",
     src: "/gallery/photo2.jpg",
     alt: "Textured crop in white cape",
-    className: "w-[38vw] max-w-[170px] sm:w-[17vw] sm:min-w-[170px] sm:max-w-[240px] aspect-[9/16] top-[12%]",
-    leftPercent: 164,
+    className: "w-[48vw] max-w-[210px] sm:w-[17vw] sm:min-w-[170px] sm:max-w-[240px] aspect-[3/4] sm:aspect-[9/16] top-[62%] sm:top-[12%]",
+    leftPercent: 184,
     depth: 26,
   },
   {
     id: "front-11",
     src: "/gallery/photo11.jpg",
     alt: "Low skin fade crop",
-    className: "hidden sm:block w-[28vw] min-w-[280px] max-w-[420px] aspect-[16/10] top-[53%]",
-    leftPercent: 218,
+    className: "w-[45vw] max-w-[200px] sm:w-[28vw] sm:min-w-[280px] sm:max-w-[420px] aspect-[4/5] sm:aspect-[16/10] top-[11%] sm:top-[53%]",
+    leftPercent: 220,
     depth: 20,
   },
 ];
-
-// Brandon Yasin Editorial Mobile Gallery
-const MOBILE_GALLERY = [
-  { id: "mg-1", number: "01", title: "SKIN FADE", src: "/gallery/photo1.jpg", alt: "Skin fade side profile" },
-  { id: "mg-2", number: "02", title: "TEXTURED CROP", src: "/gallery/photo3.jpg", alt: "Modern textured crop" },
-  { id: "mg-3", number: "03", title: "MULLET TAPER", src: "/gallery/photo4.jpg", alt: "Mullet fade with beard" },
-  { id: "mg-4", number: "04", title: "CHAIR SESSION", src: "/gallery/photo6.jpg", alt: "Client in barber chair" },
-  { id: "mg-5", number: "05", title: "SHARP FADE", src: "/gallery/photo7.jpg", alt: "Sharp fade finish" },
-  { id: "mg-6", number: "06", title: "CLASSIC CROP", src: "/gallery/photo8.jpg", alt: "Classic textured crop" },
-  { id: "mg-7", number: "07", title: "SCISSOR WORK", src: "/gallery/photo9.jpg", alt: "Barber scissor styling" },
-  { id: "mg-8", number: "08", title: "RAZOR FINISH", src: "/gallery/photo10.jpg", alt: "Master razor haircut" },
-];
-
-const TRIPLE_MOBILE_GALLERY = [...MOBILE_GALLERY, ...MOBILE_GALLERY, ...MOBILE_GALLERY];
 
 export default function Hero() {
   const pinWrapperRef = useRef(null);
@@ -152,12 +138,6 @@ export default function Hero() {
   const backTrackRef = useRef(null);
   const frontTrackRef = useRef(null);
   const servicesRef = useRef(null);
-
-  // Mobile Brandon Yasin Gallery Refs
-  const mobileGalleryRef = useRef(null);
-  const mobileScrollRef = useRef(null);
-  const isMobileUserInteractingRef = useRef(false);
-  const mobileDriftRafRef = useRef(null);
 
   const driftTweenRef = useRef(null);
   const scrollTriggerRef = useRef(null);
@@ -203,12 +183,9 @@ export default function Hero() {
 
     const { pRect, bRect } = metrics;
     const cx = window.innerWidth / 2;
-    // On mobile (<768px), lift PaUL BARber into the upper space so the Brandon Yasin carousel has the entire bottom half!
-    const cy =
-      window.innerWidth < 768
-        ? Math.max(window.innerHeight * 0.21, 115)
-        : window.innerHeight / 2;
-    const scale = window.innerWidth < 480 ? 1.25 : window.innerWidth < 768 ? 1.42 : 1.7;
+    // Both mobile and laptop: PaUL BARber centers naturally in the viewport
+    const cy = window.innerHeight / 2;
+    const scale = window.innerWidth < 480 ? 1.3 : window.innerWidth < 768 ? 1.45 : 1.7;
 
     const wP = pRect.width * scale;
     const hP = pRect.height * scale;
@@ -347,9 +324,9 @@ export default function Hero() {
         scrollTrigger: {
           trigger: pinWrapperRef.current,
           start: "top top",
-          end: isMobile ? "+=2200" : "+=3600",
+          end: isMobile ? "+=2000" : "+=3600",
           pin: heroStageRef.current,
-          scrub: isMobile ? 0.4 : 0.8,
+          scrub: isMobile ? 0.3 : 0.8,
           anticipatePin: 1,
           invalidateOnRefresh: true,
           onUpdate: (self) => {
@@ -414,7 +391,7 @@ export default function Hero() {
         0.38
       );
 
-      // Gallery cards unclip from bottom (Desktop)
+      // Gallery cards reveal (Both Desktop & Mobile)
       if (allCards && allCards.length > 0) {
         tl.fromTo(
           allCards,
@@ -431,16 +408,6 @@ export default function Hero() {
         );
       }
 
-      // Mobile Brandon Yasin gallery strip reveal
-      if (mobileGalleryRef.current) {
-        tl.fromTo(
-          mobileGalleryRef.current,
-          { opacity: 0, y: 35, pointerEvents: "none" },
-          { opacity: 1, y: 0, duration: 0.55, ease: "power2.out", pointerEvents: "auto" },
-          0.58
-        );
-      }
-
       // STEP 1 -> STEP 2: Gallery -> Services
       // Danielle Levitt synchronized simultaneous exit of all 12 photos
       if (allCards && allCards.length > 0) {
@@ -452,14 +419,6 @@ export default function Hero() {
             duration: 0.45,
             ease: "power2.inOut",
           },
-          2.10
-        );
-      }
-
-      if (mobileGalleryRef.current) {
-        tl.to(
-          mobileGalleryRef.current,
-          { opacity: 0, y: 30, duration: 0.45, ease: "power2.inOut", pointerEvents: "none" },
           2.10
         );
       }
@@ -576,69 +535,6 @@ export default function Hero() {
 
     const handleScrollToServices = () => scrollToServices();
 
-{/*
-  window.addEventListener("mousemove", handleMouseMove, { passive: true });
-*/}
-    // Setup Mobile Brandon Yasin Infinite Horizontal Swipe & Drift
-    const scrollEl = mobileScrollRef.current;
-    let cleanupMobileScroll = () => {};
-    if (scrollEl) {
-      const initScroll = () => {
-        const sW = scrollEl.scrollWidth / 3;
-        if (sW > 0) {
-          scrollEl.scrollLeft = sW;
-        }
-      };
-      const tId = setTimeout(initScroll, 80);
-
-      const handleInfiniteScroll = () => {
-        const sW = scrollEl.scrollWidth / 3;
-        if (sW <= 0) return;
-        if (scrollEl.scrollLeft >= sW * 2) {
-          scrollEl.scrollLeft -= sW;
-        } else if (scrollEl.scrollLeft <= sW * 0.1) {
-          scrollEl.scrollLeft += sW;
-        }
-      };
-
-      scrollEl.addEventListener("scroll", handleInfiniteScroll, { passive: true });
-
-      let isWindowScrolling = false;
-      let windowScrollTimer = null;
-      const onWindowScroll = () => {
-        isWindowScrolling = true;
-        clearTimeout(windowScrollTimer);
-        windowScrollTimer = setTimeout(() => {
-          isWindowScrolling = false;
-        }, 180);
-      };
-      window.addEventListener("scroll", onWindowScroll, { passive: true });
-
-      let lastTime = performance.now();
-      const autoDrift = (now) => {
-        const dt = now - lastTime;
-        lastTime = now;
-        if (!isMobileUserInteractingRef.current && !isWindowScrolling && scrollTriggerRef.current) {
-          const p = scrollTriggerRef.current.progress;
-          if (p >= 0.15 && p <= 0.65) {
-            scrollEl.scrollLeft += 0.45 * (dt / 16.67);
-          }
-        }
-        mobileDriftRafRef.current = requestAnimationFrame(autoDrift);
-      };
-      mobileDriftRafRef.current = requestAnimationFrame(autoDrift);
-
-      cleanupMobileScroll = () => {
-        clearTimeout(tId);
-        clearTimeout(windowScrollTimer);
-        window.removeEventListener("scroll", onWindowScroll);
-        scrollEl.removeEventListener("scroll", handleInfiniteScroll);
-        if (mobileDriftRafRef.current) {
-          cancelAnimationFrame(mobileDriftRafRef.current);
-        }
-      };
-    }
-
     const handleHashCheck = () => {
       const isHash = typeof window !== "undefined" && window.location.hash === "#services";
       const isSession = typeof window !== "undefined" && sessionStorage.getItem("returnToServices") === "true";
@@ -657,10 +553,6 @@ export default function Hero() {
     window.addEventListener("scroll-to-services", handleScrollToServices);
 
     return () => {
-      {/*
-        window.removeEventListener("mousemove", handleMouseMove);
-        */}
-      cleanupMobileScroll();
       ScrollTrigger.removeEventListener("refreshInit", handleRefreshInit);
       window.removeEventListener("resize", handleResize);
       window.removeEventListener("hashchange", handleHashCheck);
@@ -879,10 +771,10 @@ gsap.to(driftTweenRef.current, { timeScale: 0.1, duration: 0.9, overwrite: "auto
 
 
 
-        {/* LAYER 1: BACK TRACK (z-10, UNDER PaUL BARber Text, Desktop Only) */}
+        {/* LAYER 1: BACK TRACK (z-10, UNDER PaUL BARber Text) */}
         <div
           ref={backTrackRef}
-          className="hidden md:flex absolute inset-0 pointer-events-none z-10 w-[480vw] h-full items-center will-change-transform transition-opacity"
+          className="flex absolute inset-0 pointer-events-none z-10 w-[480vw] h-full items-center will-change-transform transition-opacity"
         >
           {[0, 1].map((cycle) => (
             <div key={`back-cycle-${cycle}`} className="relative w-[240vw] h-full shrink-0">
@@ -950,10 +842,10 @@ gsap.to(driftTweenRef.current, { timeScale: 0.1, duration: 0.9, overwrite: "auto
           </div>
         </section>
 
-        {/* LAYER 3: FRONT TRACK (z-30, OVER PaUL BARber Text, Desktop Only) */}
+        {/* LAYER 3: FRONT TRACK (z-30, OVER PaUL BARber Text) */}
         <div
           ref={frontTrackRef}
-          className="hidden md:flex absolute inset-0 pointer-events-none z-30 w-[480vw] h-full items-center will-change-transform transition-opacity"
+          className="flex absolute inset-0 pointer-events-none z-30 w-[480vw] h-full items-center will-change-transform transition-opacity"
         >
           {[0, 1].map((cycle) => (
             <div key={`front-cycle-${cycle}`} className="relative w-[240vw] h-full shrink-0">
@@ -974,67 +866,13 @@ gsap.to(driftTweenRef.current, { timeScale: 0.1, duration: 0.9, overwrite: "auto
                     alt={photo.alt}
                     fill
                     className="object-cover pointer-events-none"
-                    sizes="(max-width: 768px) 40vw, (max-width: 1280px) 30vw, 25vw"
+                    sizes="(max-width: 768px) 50vw, (max-width: 1280px) 30vw, 25vw"
                     priority
                   />
                 </div>
               ))}
             </div>
           ))}
-        </div>
-
-        {/* LAYER 3-B: MOBILE BRANDON YASIN INFINITE GALLERY (z-30, Mobile only < md) */}
-        <div
-          ref={mobileGalleryRef}
-          className="md:hidden absolute bottom-6 sm:bottom-8 inset-x-0 z-30 pointer-events-none opacity-0 flex flex-col gap-2.5"
-        >
-          {/* Swipeable Carousel Track with infinite momentum touch */}
-          <div
-            ref={mobileScrollRef}
-            onTouchStart={() => {
-              isMobileUserInteractingRef.current = true;
-            }}
-            onTouchEnd={() => {
-              setTimeout(() => {
-                isMobileUserInteractingRef.current = false;
-              }, 1200);
-            }}
-            className="w-full overflow-x-auto scrollbar-none pointer-events-auto flex gap-3.5 px-4 py-1 touch-auto"
-            style={{
-              WebkitOverflowScrolling: "touch",
-              scrollbarWidth: "none",
-              msOverflowStyle: "none",
-            }}
-          >
-            {TRIPLE_MOBILE_GALLERY.map((item, idx) => (
-              <div
-                key={`mob-card-${item.id}-${idx}`}
-                className="shrink-0 w-[74vw] xs:w-[70vw] sm:w-[60vw] max-w-[320px] flex flex-col gap-2 select-none active:scale-[0.98] transition-transform"
-              >
-                {/* Minimal Editorial Title above Image (Brandon Yasin style) */}
-                <div className="flex items-center justify-between text-[11px] sm:text-[12px] font-semibold text-[#F2F0EB]/90 uppercase px-0.5 tracking-wider">
-                  <span className="truncate">{item.title}</span>
-                  <span className="text-[#F2F0EB]/40 font-mono text-[10px] tracking-normal">{item.number}</span>
-                </div>
-
-                {/* Tall Portrait Card */}
-                <div className="relative aspect-[3/4] w-full rounded-[3px] overflow-hidden bg-neutral-900 border border-white/15 shadow-2xl">
-                  <Image
-                    src={item.src}
-                    alt={item.alt}
-                    fill
-                    className="object-cover pointer-events-none"
-                    sizes="(max-width: 640px) 75vw, 320px"
-                    priority={idx < 4}
-                  />
-                  {/* Subtle editorial gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
-                </div>
-              </div>
-            ))}
-          </div>
-
-          
         </div>
 
         {/* LAYER 4: SERVICES SECTION (z-40, Appears with PaUL SerVices left-aligned in background) */}
